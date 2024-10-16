@@ -1,21 +1,87 @@
 body{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: fantasy;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: aquamarine;
+    
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper {
+    text-align: flex-start;
+    margin: 20px;
 }
 
 .ancestry-container{
     position: relative;
+    margin-top: 20px;
 }
 
 .info-box{
     position: absolute;
-    top: 0; left: 0;
+    top: 40px; left: 0;
     width: 200px;
     background-color: lightsalmon;
     border: 1px solid black;
     padding: 10px;
     display: none;
+    z-index: 10;
+}
+
+.trigger:hover .info-box{
+    display: block;
 }
 
 .trigger{
     cursor: pointer;
+}
+
+#ancestry {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#ancestry li {
+    margin: 10px;
+}
+
+#ancestry button {
+    background-color: tan;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size:16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    height: 5em;
+}
+
+#ancestry button:hover {
+    background-color: coral;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .info-box{
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        margin-top: 10px;
+    }
 }
