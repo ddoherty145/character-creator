@@ -58,8 +58,8 @@ toggleVisibility('revealDrekButton', 'drek-ancestry-wrapper');
 toggleVisibility('scholarButton', 'drek-scholar-wrapper');
 toggleVisibility('berserkerButton', 'drek-berserker-wrapper');
 toggleVisibility('artilleristsButton', 'drek-artillerist-wrapper')
-toggleVisibility('')
-toggleVisibility('')
+toggleVisibility('beacon-paladin', 'beacon-image');
+toggleVisibility('altos-paladin','altos-image');
 toggleVisibility('')
 
        
