@@ -57,10 +57,13 @@ toggleVisibility('spelljammerButton', 'gnome-jammer-wrapper');
 toggleVisibility('revealDrekButton', 'drek-ancestry-wrapper');
 toggleVisibility('scholarButton', 'drek-scholar-wrapper');
 toggleVisibility('berserkerButton', 'drek-berserker-wrapper');
-toggleVisibility('artilleristsButton', 'drek-artillerist-wrapper')
+toggleVisibility('artilleristsButton', 'drek-artillerist-wrapper');
 toggleVisibility('beacon-paladin', 'beacon-image');
 toggleVisibility('altos-paladin','altos-image');
-toggleVisibility('')
+toggleVisibility('voltaria-arcanist', 'voltaria-arcanist-image');
+toggleVisibility('sahee-arcanist','sahee-arcanist-image');
+toggleVisibility('chimermond-gunslinger', 'chimermond-gunslinger-image')
+toggleVisibility('newlobec-gunslinger', 'newlobec-gunslinger-image')
 
        
 });
