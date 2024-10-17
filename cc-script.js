@@ -1,315 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
     // select all trigger elements (for ancestries)
-    //const triggers = document.querySelectorAll('.trigger');
+    // const triggers = document.querySelectorAll('.trigger');
 
-    // // add event listeners to each trigger element
-    // triggers.forEach(trigger => {
-    //     const infoBox = trigger.querySelector('.info-box'); // Select the info-box within the trigger
+    // // // add event listeners to each trigger element
+    // // triggers.forEach(trigger => {
+    // //     const infoBox = trigger.querySelector('.info-box'); // Select the info-box within the trigger
 
-    //     // show the info box when hovering over the trigger
-    //     trigger.addEventListener('mouseover', () => {
-    //         infoBox.style.display = 'block';
-    //     });
+    // //     // show the info box when hovering over the trigger
+    // //     trigger.addEventListener('mouseover', () => {
+    // //         infoBox.style.display = 'block';
+    // //     });
 
-    //     // hide the info box when the mouse leaves the trigger
-    //     trigger.addEventListener('mouseout', () => {
-    //         infoBox.style.display = 'none';
-    //     });
+    // //     // hide the info box when the mouse leaves the trigger
+    // //     trigger.addEventListener('mouseout', () => {
+    // //         infoBox.style.display = 'none';
+    // //     });
 
         
-    //     trigger.addEventListener('mousemove', (event) => {
-    //         const mouseX = event.clientX;
-    //         const mouseY = event.clientY;
+    // //     trigger.addEventListener('mousemove', (event) => {
+    // //         const mouseX = event.clientX;
+    // //         const mouseY = event.clientY;
 
             
-    //         infoBox.style.left = `${mouseX + 15}px`; 
-    //         infoBox.style.top = `${mouseY + 15}px`;
-    //     });
-    // });
+    // //         infoBox.style.left = `${mouseX + 15}px`; 
+    // //         infoBox.style.top = `${mouseY + 15}px`;
+    // //     });
+    // // });
 
-    // toggle hidden content for Human ancestry
-    const revealHumanButton = document.getElementById('revealHumanButton');
-    const hiddenContent = document.getElementById('human-ancestry-wrapper');
+   
+    // Function to toggle visibility of hidden content
+function toggleVisibility(buttonId, contentId) {
+    const button = document.getElementById(buttonId);
+    const content = document.getElementById(contentId);
 
-    if (revealHumanButton && hiddenContent) {
-        revealHumanButton.addEventListener('click', () => {
-            if (hiddenContent.style.display === 'none' || hiddenContent.style.display === ''){
-                hiddenContent.style.display = 'block'
-            } else {
-                hiddenContent.style.display = 'none'
-            }
-            
+    if (button && content) {
+        button.addEventListener('click', () => {
+            content.style.display = (content.style.display === 'none' || content.style.display === '') 
+                ? 'block' : 'none';
         });
     }
+}
 
-        // toggle hidden content for Human arcanist class
-    const revealHumanArcanistButton = document.getElementById('arcanistButton');
-    const hiddenContentHumanArcanist = document.getElementById('human-arcanist-wrapper');
+// Toggle visibility for various sections
+toggleVisibility('revealHumanButton', 'human-ancestry-wrapper');
+toggleVisibility('arcanistButton', 'human-arcanist-wrapper');
+toggleVisibility('paladinButton', 'human-paladin-wrapper');
+toggleVisibility('gunslingerButton', 'human-gunslinger-wrapper');
+toggleVisibility('revealEarkinButton','earkin-ancestry-wrapper');
+toggleVisibility('avatarButton', 'earkin-avatar-wrapper');
+toggleVisibility('geomancerButton', 'earkin-geonmancer-wrapper');
+toggleVisibility('boltThrowerButton', 'earkin-bolt-wrapper');
+toggleVisibility('revealGnomeButton', 'gnome-ancestry-wrapper');
+toggleVisibility('technomancerButton', 'gnome-tech-wrapper');
+toggleVisibility('wizbangButton', 'gnome-wizbang-wrapper');
+toggleVisibility('spelljammerButton', 'gnome-jammer-wrapper');
+toggleVisibility('revealDrekButton', 'drek-ancestry-wrapper');
+toggleVisibility('scholarButton', 'drek-scholar-wrapper');
+toggleVisibility('berserkerButton', 'drek-berserker-wrapper');
+toggleVisibility('artilleristsButton', 'drek-artillerist-wrapper')
+toggleVisibility('')
+toggleVisibility('')
+toggleVisibility('')
 
-    if (revealHumanArcanistButton && hiddenContentHumanArcanist) {
-        revealHumanArcanistButton.addEventListener('click', () => {
-            if (hiddenContentHumanArcanist.style.display === 'none' || hiddenContentHumanArcanist.style.display === ''){
-                hiddenContentHumanArcanist.style.display = 'block'
-            } else {
-                hiddenContentHumanArcanist.style.display = 'none'
-            }
-            
-        });
-    }
-
-    // toggle hidden content for Human paladin class
-    const revealHumanPaladinButton = document.getElementById('paladinButton');
-    const hiddenContentHumanPaladin = document.getElementById('human-paladin-wrapper');
-
-    if (revealHumanPaladinButton && hiddenContentHumanPaladin) {
-        revealHumanPaladinButton.addEventListener('click', () => {
-            if (hiddenContentHumanPaladin.style.display === 'none' || hiddenContentHumanPaladin.style.display === ''){
-                hiddenContentHumanPaladin.style.display = 'block'
-            } else {
-                hiddenContentHumanPaladin.style.display = 'none'
-            }
-            
-        });
-    }
-
-      // toggle hidden content for Human gunslinger class
-      const revealHumanGunButton = document.getElementById('gunslingerButton');
-      const hiddenContentHumanGun = document.getElementById('human-paladin-wrapper');
-  
-      if (revealHumanGunButton && hiddenContentHumanGun) {
-        revealHumanGunButton.addEventListener('click', () => {
-              if (hiddenContentHumanGun.style.display === 'none' || hiddenContentHumanGun.style.display === ''){
-                  hiddenContentHumanGun.style.display = 'block'
-              } else {
-                hiddenContentHumanGun.style.display = 'none'
-              }
-              
-          });
-      }
-
-       // toggle hidden content for Earkin ancestry
-       const revealEarkinButton = document.getElementById('revealEarkinButton');
-       const hiddenContentEarkin = document.getElementById('earkin-ancestry-wrapper');
-   
-       if (revealEarkinButton && hiddenContentEarkin) {
-           revealEarkinButton.addEventListener('click', () => {
-               if (hiddenContentEarkin.style.display === 'none' || hiddenContentEarkin.style.display === ''){
-                   hiddenContentEarkin.style.display = 'block'
-               } else {
-                   hiddenContentEarkin.style.display = 'none'
-               }
-               
-           });
-       }
-
-       // toggle hidden content for Earkin avatar class
-      const revealEarkinAvatarButton = document.getElementById('avatarButton');
-      const hiddenContentEarkinAvatar = document.getElementById('earkin-avatar-wrapper');
-  
-      if (revealEarkinAvatarButton && hiddenContentEarkinAvatar) {
-        revealEarkinAvatarButton.addEventListener('click', () => {
-              if (hiddenContentEarkinAvatar.style.display === 'none' || hiddenContentEarkinAvatar.style.display === ''){
-                hiddenContentEarkinAvatar.style.display = 'block'
-              } else {
-                hiddenContentEarkinAvatar.style.display = 'none'
-              }
-              
-          });
-      }
-
-        // toggle hidden content for Earkin geomancer class
-        const revealEarkinGeoButton = document.getElementById('geomancerButton');
-        const hiddenContentEarkinGeo = document.getElementById('earkin-geomancer-wrapper');
-    
-        if (revealEarkinGeoButton && hiddenContentEarkinGeo) {
-            revealEarkinGeoButton.addEventListener('click', () => {
-                if (hiddenContentEarkinGeo.style.display === 'none' || hiddenContentEarkinGeo.style.display === ''){
-                    hiddenContentEarkinGeo.style.display = 'block'
-                } else {
-                  hiddenContentEarkinGeo.style.display = 'none'
-                }
-                
-            });
-        }
-
-        // toggle hidden content for Earkin geomancer class
-        const revealEarkinBoltButton = document.getElementById('boltThrowerButton');
-        const hiddenContentEarkinBolt = document.getElementById('earkin-bolt-wrapper');
-    
-        if (revealEarkinBoltButton && hiddenContentEarkinBolt) {
-            revealEarkinBoltButton.addEventListener('click', () => {
-                if (hiddenContentEarkinBolt.style.display === 'none' || hiddenContentEarkinBolt.style.display === ''){
-                    hiddenContentEarkinBolt.style.display = 'block'
-                } else {
-                    hiddenContentEarkinBolt.style.display = 'none'
-                }
-                
-            });
-        }
-
-       //toggle hidden content for Gnome ancestry
-       const revealGnomeButton = document.getElementById('revealGnomeButton');
-       const hiddenContentGnome = document.getElementById('gnome-ancestry-wrapper');
-   
-       if (revealGnomeButton && hiddenContentGnome) {
-           revealGnomeButton.addEventListener('click', () => {
-               if (hiddenContentGnome.style.display === 'none' || hiddenContentGnome.style.display === ''){
-                   hiddenContentGnome.style.display = 'block'
-               } else {
-                   hiddenContentGnome.style.display = 'none'
-               }
-               
-           });
-       }
-
-       // toggle hidden content for Gnome technomancer class
-      const revealGnomeTechButton = document.getElementById('technomancerButton');
-      const hiddenContentGnomeTech = document.getElementById('gnome-tech-wrapper');
-  
-      if (revealGnomeTechButton && hiddenContentGnomeTech) {
-        revealGnomeTechButton.addEventListener('click', () => {
-              if (hiddenContentGnomeTech.style.display === 'none' || hiddenContentGnomeTech.style.display === ''){
-                hiddenContentGnomeTech.style.display = 'block'
-              } else {
-                hiddenContentGnomeTech.style.display = 'none'
-              }
-              
-          });
-      }
-
-        // toggle hidden content for gnome wizbang class
-        const revealGnomeWizbangButton = document.getElementById('wizbangButton');
-        const hiddenContentGnomeWizbang = document.getElementById('gnome-wizbang-wrapper');
-    
-        if (revealGnomeWizbangButton && hiddenContentGnomeWizbang) {
-            revealGnomeWizbangButton.addEventListener('click', () => {
-                if (hiddenContentGnomeWizbang.style.display === 'none' || hiddenContentGnomeWizbang.style.display === ''){
-                    hiddenContentGnomeWizbang.style.display = 'block'
-                } else {
-                    hiddenContentGnomeWizbang.style.display = 'none'
-                }
-                
-            });
-        }
-
-        // toggle hidden content for gnome spelljammer class
-        const revealGnomeJammerButton = document.getElementById('spelljammerButton');
-        const hiddenContentGnomeJammer = document.getElementById('gnome-jammer-wrapper');
-    
-        if (revealGnomeJammerButton && hiddenContentGnomeJammer) {
-            revealGnomeJammerButton.addEventListener('click', () => {
-                if (hiddenContentGnomeJammer.style.display === 'none' || hiddenContentGnomeJammer.style.display === ''){
-                    hiddenContentGnomeJammer.style.display = 'block'
-                } else {
-                    hiddenContentGnomeJammer.style.display = 'none'
-                }
-                
-            });
-        }
-
-       //toggle hidden content for Drek ancestry
-       const revealDrekButton = document.getElementById('revealDrekButton');
-       const hiddenContentDrek = document.getElementById('drek-ancestry-wrapper');
-   
-       if (revealDrekButton && hiddenContentDrek) {
-           revealDrekButton.addEventListener('click', () => {
-               if (hiddenContentDrek.style.display === 'none' || hiddenContentDrek.style.display === ''){
-                   hiddenContentDrek.style.display = 'block'
-               } else {
-                   hiddenContentDrek.style.display = 'none'
-               }
-               
-           });
-       }
-
-       // toggle hidden content for Drek berserker class
-      const revealDrekBerserkerButton = document.getElementById('berserkerButton');
-      const hiddenContentDrekBerserker = document.getElementById('drek-berserker-wrapper');
-  
-      if (revealDrekBerserkerButton && hiddenContentDrekBerserker) {
-        revealDrekBerserkerButton.addEventListener('click', () => {
-              if (hiddenContentDrekBerserker.style.display === 'none' || hiddenContentDrekBerserker.style.display === ''){
-                hiddenContentDrekBerserker.style.display = 'block'
-              } else {
-                hiddenContentDrekBerserker.style.display = 'none'
-              }
-              
-          });
-      }
-
-        // toggle hidden content for Drek scholar class
-        const revealDrekScholarButton = document.getElementById('scholarButton');
-        const hiddenContentDrekScholar = document.getElementById('drek-scholar-wrapper');
-    
-        if (revealDrekScholarButton && hiddenContentDrekScholar) {
-            revealDrekScholarButton.addEventListener('click', () => {
-                if (hiddenContentDrekScholar.style.display === 'none' || hiddenContentDrekScholar.style.display === ''){
-                    hiddenContentDrekScholar.style.display = 'block'
-                } else {
-                    hiddenContentDrekScholar.style.display = 'none'
-                }
-                
-            });
-        }
-
-        // toggle hidden content for Drek Artillerists class
-        const revealDrekArtilleristsButton = document.getElementById('artilleristsButton');
-        const hiddenContentDrekArtillerists = document.getElementById('drek-artillerist-wrapper');
-    
-        if (revealDrekArtilleristsButton && hiddenContentDrekArtillerists) {
-            revealDrekArtilleristsButton.addEventListener('click', () => {
-                if (hiddenContentDrekArtillerists.style.display === 'none' || hiddenContentDrekArtillerists.style.display === ''){
-                    hiddenContentDrekArtillerists.style.display = 'block'
-                } else {
-                    hiddenContentDrekArtillerists.style.display = 'none'
-                }
-                
-            });
-        }
-
-        //toggle hidden content for Dryan ancestry
-       const revealDryanButton = document.getElementById('revealDryanButton');
-       const hiddenContentDryan = document.getElementById('dryan-ancestry-wrapper');
-   
-       if (revealDryanButton && hiddenContentDryan) {
-           revealDryanButton.addEventListener('click', () => {
-               if (hiddenContentDryan.style.display === 'none' || hiddenContentDryan.style.display === ''){
-                   hiddenContentDryan.style.display = 'block'
-               } else {
-                   hiddenContentDryan.style.display = 'none'
-               }
-               
-           });
-       }
-
-        //toggle hidden content for Raskin ancestry
-        const revealRaskinButton = document.getElementById('revealRaskinButton');
-        const hiddenContentRaskin = document.getElementById('raskin-ancestry-wrapper');
-    
-        if (revealRaskinButton && hiddenContentRaskin) {
-            revealRaskinButton.addEventListener('click', () => {
-                if (hiddenContentRaskin.style.display === 'none' || hiddenContentRaskin.style.display === ''){
-                    hiddenContentRaskin.style.display = 'block'
-                } else {
-                    hiddenContentRaskin.style.display = 'none'
-                }
-                
-            });
-        }
-
-         //toggle hidden content for Robbit ancestry
-        const revealRobbitButton = document.getElementById('revealRobbitButton');
-        const hiddenContentRobbit = document.getElementById('robbit-ancestry-wrapper');
-            
-        if (revealRobbitButton && hiddenContentRobbit) {
-            revealRobbitButton.addEventListener('click', () => {
-                if (hiddenContentRobbit.style.display === 'none' || hiddenContentRobbit.style.display === ''){
-                    hiddenContentRobbit.style.display = 'block'
-                } else {
-                hiddenContentRobbit.style.display = 'none'
-                }
-                        
-            });
-    }
        
 });
