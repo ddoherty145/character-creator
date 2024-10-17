@@ -1,4 +1,4 @@
-/* body{
+body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,10 +34,6 @@ header{
     padding: 10px;
     display: none;
     z-index: 100;
-}
-
-.trigger:hover .info-box{
-    display: block;
 }
 
 .trigger{
@@ -94,7 +90,7 @@ header{
     cursor: pointer;
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .info-box{
         position: relative;
         width: 100%;
@@ -102,4 +98,4 @@ header{
         left: auto;
         margin-top: 10px;
     }
-} */ 
+} 
