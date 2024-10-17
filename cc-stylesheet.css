@@ -1,101 +1,155 @@
-/* body{
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background-color: #b0e5bf;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ancestry-container {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    font-family: fantasy;
-    margin: 0;
+    gap: 20px;
+}
+
+ul{
+    list-style-type: none;
     padding: 0;
-    height: 100vh;
-    background-color: aquamarine;
-    
+    margin:0;
+}
+
+#ancestry {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#ancestry button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px; 
+    height: 200px; 
+    padding: 10px;
+    background-color: #9d8454;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: fantasy;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ancestry button:hover {
+    background-color: #be9b58;
+}
+
+#ancestry button strong {
+    font-family: fantasy;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#ancestry button p{
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+/* Rectangular Buttons for Class Sections
+#human-ancestry-wrapper, #human-arcanist-wrapper, #human-paladin-wrapper, #human-gunslinger-wrapper, #earkin-ancestry-wrapper, #earkin-avatar-wrapper, #earkin-geomancer-wrapper, #earkin-bolt-wrapper, #gnome-ancestry-wrapper, #gnome-tech-wrapper, #gnome-wizbang-wrapper, #gnome-jammer-wrapper, #drek-ancestry-wrapper, #drek-scholar-wrapper, #drek-berserker-wrapper, #drek-artillerist-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+} */
+
+/* Class Containers */
+.human-class-container, .arcanist-location-container, .paladin-location-container, .gunslinger-location-container, .earkin-class-container, .avatar-location-container, .geomancer-location-container, .bolt-location-container, .gnome-class-container, .tech-location-container, .wizbang-location-container, .jammer-location-container, .drek-class-container, .cholar-location-container, .berserker-location-container, .artillerist-location-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px;
+    background-color: #b0e5bf;
+    border: 1px solid #394c3e;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.08);
+    gap: 20px;
+}
+
+/* Rectangular Buttons for Class and Location Sections */
+#human-class button, #arcanist-location button, #paladin-location button, #gunslinger-location button, #earkin-class button, #avatar-location button, #geomancer-location button, #bolt-location button, #gnome-class button, #tech-location button, #wizbang-location button, #jammer-location button, #drek-class button, #scholar-location button, #berserker-location button, #artillerist-location button {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+    width: 100%; /* Full width of the container */
+    height: auto; /* Automatic height based on content */
+    padding: 20px;
+    background-color: #c78222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: fantasy;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Hover Effect for Class Section Buttons */
+#human-class button:hover, #arcanist-location button:hover, #paladin-location button:hover, #gunslinger-location button:hover, #earkin-class button:hover, #avatar-location button:hover, #geomancer-location button:hover, #bolt-location button:hover, #gnome-class button:hover, #tech-location button:hover, #wizbang-location button:hover, #jammer-location button:hover, #drek-class button:hover, #scholar-location button:hover, #berserker-location button:hover, #artillerist-location button:hover{
+    background-color: #e1670f;
+}
+
+/* Strong Text for Class Section Buttons */
+#human-class button strong, #arcanist-location button strong, #paladin-location button strong, #gunslinger-location button strong, #earkin-class button strong, #avatar-location button strong, #geomancer-location button strong, #bolt-location button strong, #gnome-class button strong, #tech-location button strong, #wizbang-location button strong, #jammer-location button strong, #drek-class button strong, #scholar-location button strong, #berserker-location button strong, #artillerist-location button strong {
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding: 10px;
+    font-family: fantasy;
+}
+
+/* Aligning and Styling for Button Content */
+#human-class button div, #arcanist-location button div, #paladin-location button div, #gunslinger-location button div, #earkin-class button div, #avatar-location button div, #geomancer-location button div, #bolt-location button div, #gnome-class button div, #tech-location button div, #wizbang-location button div, #jammer-location button div, #drek-class button div, #scholar-location button div, #berserker-location button div, #artillerist-location button div{
+    font-size: 14px;
+    margin-top: 8px;
+    font-family: fantasy;
+}
+
+#human-class li, #arcanist-location li, #paladin-location li, #gunslinger-location li, #earkin-class button li, #avatar-location button li, #geomancer-location button li, #bolt-location button li, #gnome-class button li, #tech-location button li, #wizbang-location button li, #jammer-location button li, #drek-class button li, #scholar-location button li, #berserker-location button li, #artillerist-location button li{
+    display: flex;
+    gap: 20px;
+}
+
+main{
+    font-family: fantasy;
+}
+
+body{
+    background-image: url(https://image.cdn2.seaart.ai/2023-11-08/22105725325021189/2a9131df6446a8330892041c1b2005ebb859be4f_high.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 header{
     display: flex;
     flex-direction: column;
-    margin:1rem;
+    padding: 15px;
+    margin: 15px;
+    background-color: #bd623c;
+    border: 1px solid #394c3e;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.08);
+    gap: 20px;
 }
-
-#wrapper {
-    text-align: flex-start;
-    margin: 20px;
-}
-
-.ancestry-container{
-    position: relative;
-    margin-top: 20px;
-}
-
-.info-box{
-    position: absolute;
-    width: 900px;
-    background-color: lightsalmon;
-    border: 1px solid black;
-    padding: 10px;
-    display: none;
-    z-index: 100;
-}
-
-.trigger{
-    cursor: pointer;
-}
-
-#ancestry {
-    list-style:none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-#ancestry li {
-    margin: 10px;
-}
-
-#ancestry button {
-    background-color: tan;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size:16px;
-    cursor: pointer;
-    border-radius: 15px;
-    transition: background-color 0.3s ease;
-    height: 5em;
-}
-
-#ancestry button:hover {
-    background-color: coral;
-    color: white;
-}
-
-#human-ancestry-wrapper {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#human-ancestry-wrapper.show {
-    display: block;
-    opacity: 1;
-}
-
-#human{
-    background-color: black;
-    color:aliceblue;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-@media (max-width: 600px) {
-    .info-box{
-        position: relative;
-        width: 100%;
-        top: auto;
-        left: auto;
-        margin-top: 10px;
-    }
-}  */
