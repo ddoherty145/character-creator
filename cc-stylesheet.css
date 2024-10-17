@@ -1,8 +1,7 @@
-body{
+/* body{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-family: fantasy;
     margin: 0;
     padding: 0;
@@ -14,6 +13,7 @@ body{
 header{
     display: flex;
     flex-direction: column;
+    margin:1rem;
 }
 
 #wrapper {
@@ -28,13 +28,12 @@ header{
 
 .info-box{
     position: absolute;
-    top: 40px; left: 0;
-    width: 200px;
+    width: 900px;
     background-color: lightsalmon;
     border: 1px solid black;
     padding: 10px;
     display: none;
-    z-index: 10;
+    z-index: 100;
 }
 
 .trigger:hover .info-box{
@@ -76,7 +75,26 @@ header{
     color: white;
 }
 
-@media (max-width: 600px) {
+#human-ancestry-wrapper {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#human-ancestry-wrapper.show {
+    display: block;
+    opacity: 1;
+}
+
+#human{
+    background-color: black;
+    color:aliceblue;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* @media (max-width: 600px) {
     .info-box{
         position: relative;
         width: 100%;
@@ -84,4 +102,4 @@ header{
         left: auto;
         margin-top: 10px;
     }
-}
+} */ 
