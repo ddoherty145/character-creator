@@ -5,24 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // add event listeners to each trigger element
     triggers.forEach(trigger => {
         const infoBox = trigger.querySelector('.info-box'); // Select the info-box within the trigger
-        const button = trigger.querySelector('button');
 
         // show the info box when hovering over the trigger
-        button.addEventListener('mouseover', (event) => {
-            const mouseX = event.clientX;
-            const mouseY = event.clientY;
-
-            
-            infoBox.style.left = `${mouseX + 50}px`; 
-            infoBox.style.top = `${mouseY - 300}px`;
+        trigger.addEventListener('mouseover', () => {
             infoBox.style.display = 'block';
         });
 
         // hide the info box when the mouse leaves the trigger
-        button.addEventListener('mouseout', () => {
+        trigger.addEventListener('mouseout', () => {
             infoBox.style.display = 'none';
         });
 
+        
+        trigger.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            
+            infoBox.style.left = `${mouseX + 15}px`; 
+            infoBox.style.top = `${mouseY + 15}px`;
+        });
     });
 
     // toggle hidden content for Human ancestry
@@ -264,5 +266,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             });
         }
+
+        //toggle hidden content for Dryan ancestry
+       const revealDryanButton = document.getElementById('revealDryanButton');
+       const hiddenContentDryan = document.getElementById('dryan-ancestry-wrapper');
+   
+       if (revealDryanButton && hiddenContentDryan) {
+           revealDryanButton.addEventListener('click', () => {
+               if (hiddenContentDryan.style.display === 'none' || hiddenContentDryan.style.display === ''){
+                   hiddenContentDryan.style.display = 'block'
+               } else {
+                   hiddenContentDryan.style.display = 'none'
+               }
+               
+           });
+       }
+
+        //toggle hidden content for Raskin ancestry
+        const revealRaskinButton = document.getElementById('revealRaskinButton');
+        const hiddenContentRaskin = document.getElementById('raskin-ancestry-wrapper');
+    
+        if (revealRaskinButton && hiddenContentRaskin) {
+            revealRaskinButton.addEventListener('click', () => {
+                if (hiddenContentRaskin.style.display === 'none' || hiddenContentRaskin.style.display === ''){
+                    hiddenContentRaskin.style.display = 'block'
+                } else {
+                    hiddenContentRaskin.style.display = 'none'
+                }
+                
+            });
+        }
+
+         //toggle hidden content for Robbit ancestry
+        const revealRobbitButton = document.getElementById('revealRobbitButton');
+        const hiddenContentRobbit = document.getElementById('robbit-ancestry-wrapper');
+            
+        if (revealRobbitButton && hiddenContentRobbit) {
+            revealRobbitButton.addEventListener('click', () => {
+                if (hiddenContentRobbit.style.display === 'none' || hiddenContentRobbit.style.display === ''){
+                    hiddenContentRobbit.style.display = 'block'
+                } else {
+                hiddenContentRobbit.style.display = 'none'
+                }
+                        
+            });
+    }
        
 });
